@@ -8,6 +8,9 @@ fastapi = "==0.68.1"
 uvicorn = "==0.15.0"
 
 [dev-packages]
+flake8 = "*"
+autopep8 = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.9"
