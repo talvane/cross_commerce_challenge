@@ -1,7 +1,13 @@
 import requests
+import logging
+from logging.config import dictConfig
 
 from .settings import Settings
+from .logconfig import LogConfig
 
+
+dictConfig(LogConfig().dict())
+logger = logging.getLogger("logger")
 
 settings = Settings()
 
@@ -19,3 +25,9 @@ class ApiNumber():
             self.page += 1
             self.array_numbers += response.json()['numbers']
             self.get_numbers(page=self.page)
+        else:
+            logger.info(
+                'Finished ApiNumber -> Respose Code: {0}'.format(
+                    response.status_code
+                    )
+                )
