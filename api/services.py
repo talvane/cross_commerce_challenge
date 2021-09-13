@@ -27,7 +27,7 @@ class ApiNumber():
             self.get_numbers(page=self.page)
         else:
             logger.info(
-                'Finished ApiNumber -> Respose Code: {0}'.format(
+                'Finished ApiNumber -> Response Code: {0}'.format(
                     response.status_code
                     )
                 )
